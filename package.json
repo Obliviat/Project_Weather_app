@@ -1,5 +1,29 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5"
-  }
+	"name": "yes",
+	"version": "1.0.0",
+	"description": "\"Udacity project\"",
+	"main": "server.js",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"object-assign": "^4.1.1",
+		"vary": "^1.1.2"
+	},
+	"scripts": {
+		"test": "test",
+		"start": "node server.js",
+		"build-prod": "webpack --config webpack.prod.js",
+		"build-dev": "webpack-dev-server  --config webpack.dev.js --open"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Obliviat/Project_Weather_app.git"
+	},
+	"author": "Joanna",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Obliviat/Project_Weather_app/issues"
+	},
+	"homepage": "https://github.com/Obliviat/Project_Weather_app#readme"
 }
