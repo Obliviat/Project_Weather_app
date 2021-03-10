@@ -26,3 +26,40 @@ function listening() {
   console.log('server running');
   console.log(`running on localhost: ${port}`);
 }
+
+//Create JS object  / Endpoint
+// const projectData = {}
+
+// Get Route that uses the url /all
+app.get('/all', sendData);
+
+function sendData(req, res) {
+  console.log(req);
+  res.send(projectData);
+};
+
+
+// POST method route
+app.post('/addData', (req, res) => {
+  const newEntry = {
+    date: req.body.date,
+    temperature: req.body.temp,
+    weather: req.body.weather,
+    content: req.body.content,
+  };
+  projectData.push(newEntry);
+  res.send(newEntry);
+});
+
+
+
+// app.post('/add', (request,response)=>{
+//   // console.log(request.body)
+//   let data = request.body;
+//   console.log(data.temp);
+
+//   // Create new entry for JS Object Endpoint
+
+//   // Send response to Endpoint
+//   response.send(projectData);
+//  })
