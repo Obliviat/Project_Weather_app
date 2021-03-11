@@ -1,23 +1,19 @@
-# Weather-Journal App Project
-
-## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+### Weather-Journal App Project
+This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI in a Weather Journal application.
 
 ## Node and Express Environment
-Node and Express should be installed on the local machine. The project file server.js should require express(), and should create an instance of their app using express.
+Node and Express should be installed on the local machine. The project file server.js should require express().
 
 ## Project Dependencies
-The ‘cors’ package should be installed in the project from the command line, required in the project file server.js, and the instance of the app should be setup to use cors().
+The ‘cors’ & 'body-parser' packages should be installed in the project from the command line.
 
-The body-parser package should be installed and included in the project.
+## Integrating OpenWeatherMap API
+- The personal API Key for OpenWeatherMap API is saved in a named const variable.
+- The API Key variable is passed as a parameter to fetch() .
+- Data is successfully returned from the external API.
 
-## Local Server
-Local server should be running and producing feedback to the Command Line through a working callback function.
-## API Credentials 
-Create API credentials on OpenWeatherMap.com
+## Run 
+node server.js
+running on http://localhost:8080
 
-## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
