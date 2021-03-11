@@ -2,27 +2,21 @@
 let d = new Date();
 let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
 
-
-// // /* Global Variables */
+//* Global Variables */
 
 const container = document.querySelector('.container');
 const zip = document.querySelector('#zip').value;
 const appId = 'e395421c2b5a4bfb7485a9e331756b01&units=imperial';
 const baseURL = `http://api.openweathermap.org/data/2.5/weather?zip=`;
 
-// const result = document.querySelector('#result');
-// const form = document.querySelector('#form');
-
 window.addEventListener('load', () => {
   form.addEventListener('submit', Valid);
 })
 
-// document.getElementById('generate').addEventListener('click', development);
-
 function Valid(e) {
   e.preventDefault();
   console.log("Search");
-  // Valid 
+  // Data input valedation 
   const zip = document.querySelector('#zip').value;
   const emotion = document.querySelector('#feelings').value;
   // console.log(zip);
@@ -31,7 +25,7 @@ function Valid(e) {
     showError('Complete the required fields');
     return;
   }
-  //Weather
+  //Weather call function 
   development(e);
 }
 
@@ -76,7 +70,7 @@ const searchWeather = async (baseURL, zip, appId) => {
     console.log("error", e);
   }
 }
-// Post
+// POST function to server
 const postData = async (url = '', data = {}) => {
   console.log(data);
   const res = await fetch(url, {
@@ -99,7 +93,7 @@ const updateUI = async () => {
   const request = await fetch('/all')
   try {
     const allData = await request.json()
-    console.log(allData, Data);
+    console.log(allData);
     document.getElementById('date').innerHTML = "Date: " + allData.date;
     document.getElementById('temp').innerHTML = "temp: " + allData.temperature;
     document.getElementById('content').innerHTML = "Feelings: " + allData.content;

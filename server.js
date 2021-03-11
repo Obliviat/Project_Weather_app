@@ -20,11 +20,10 @@ app.use(express.static('website'));
 
 // Setup Server
 const port = 8080;
-
 const server = app.listen(port, listening);
 function listening() {
   console.log('server running');
-  console.log(`running on localhost: ${port}`);
+  console.log(`running on http://localhost:${port}`);
 }
 
 //Create JS object  / Endpoint
@@ -47,7 +46,5 @@ app.post('/addData', (req, res) => {
     content: req.body.content,
   };
   Object.assign(projectData, newEntry);
-  // projectData.push(newEntry);
-  // res.send(newEntry);
 });
 
